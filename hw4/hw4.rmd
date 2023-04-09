@@ -88,11 +88,19 @@ $\mu_1= (6.2, 3.2) (\text{red}), \mu_2 = (6.6, 3.7) (\text{green)}, \mu_3 = (6.5
 
 (b). (1.5 pts) What's the center of the first cluster (red) after one iteration? (Answer in the format of [$x_1,x_2$], round your results to three decimal places)
 
+The center of the first cluster after one iteration is [5.050  3.167].
+
 (c). (1.5 pts) What's the center of the second cluster (green) after two iterations?
+
+The center of the second cluster after two iterations is [5.300 4.000].
 
 (d). (1.5 pts) What's the center of the third cluster (blue) when the clustering converges?
 
+The center of the third cluster when the clustering converges is [6.3   2.967].
+
 (e). (1.5 pts) How many iterations are required for the clusters to converge?
+
+Two interations are required for the clusters to reach their convergeant values, while the third and final iteration is where the clusters truly converge (the resultant means are the same for the end of the second iteration and the end of the third iteration).
 
 5. (25 points) In this question you will implement the
 EM algorithm for Gaussian Mixture Models. A good read on gaussian
