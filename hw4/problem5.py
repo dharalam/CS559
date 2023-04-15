@@ -77,5 +77,5 @@ def EM(X, k, nIter):
         cov0 = nCov
     return nPi, nMu, nCov
 
-rPi, rMu, rCov = EM(X, 3, 5)
+rPi, rMu, rCov = EM(X, 3, 5) # can change to play around with k and iterations
 print(f"Final Pi:\n{rPi}\nFinal Mu:\n{rMu}\nFinal Cov:\n{rCov}") 

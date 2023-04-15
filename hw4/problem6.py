@@ -1,10 +1,7 @@
 import tensorflow as tf
 import pickle, gzip
 import numpy as np
-import seaborn as sns
-import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 
 f = gzip.open('mnist.pkl.gz', 'rb')
 train_set, valid_set, test_set = pickle.load(f, encoding="latin 1")
