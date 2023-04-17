@@ -30,9 +30,11 @@ batch_size = 50 # change whenever
 num_classes = 10 # should remain 10 classes ([0,1,2,3,4,5,6,7,8,9] = 10 classes)
 epochs = 5 # change whenever
 
+# Choices for the number of filters and the size of the filters are standard based on slide examples. Future layers use multiples of these layer number and smaller filter sizes to 
+# compensate. ReLu is used as our rectifier for all Conv layers. 
 model = tf.keras.models.Sequential([tf.keras.layers.Conv2D(32, (5,5), padding="same", activation="relu", input_shape = ips),  # 32 filter convolution, applied to 5x5 portions of the image
                                     tf.keras.layers.Conv2D(32, (5,5), padding="same", activation="relu"), # ^^^
-                                    tf.keras.layers.MaxPool2D(), # reduces a full-size matrix of the image to a single pixel with a maximum value
+                                    tf.keras.layers.MaxPool2D(), # reduces a 2x2 matrix of the image to a single pixel with a maximum value
                                     tf.keras.layers.Dropout(0.25), # randomly ignore 25% of the nodes in the layer, helps learn different features
                                     tf.keras.layers.Conv2D(64, (3,3), padding="same", activation="relu"),  # 64 filter convolution, applied to 3x3 portions of the image
                                     tf.keras.layers.Conv2D(64, (3,3), padding="same", activation="relu"), # ^^^
