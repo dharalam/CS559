@@ -3,6 +3,9 @@ import pickle, gzip
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Pooling makes the data more resistant to small changes like shifting or rotation since it reduces the image to a much smaller matrix. The components that go
+# into making the 2x2 don't matter as much individually as much as they do pooled together, allowing for the model to be more robust to local translation invariance.
+
 f = gzip.open('mnist.pkl.gz', 'rb')
 train_set, valid_set, test_set = pickle.load(f, encoding="latin 1")
 f.close()
